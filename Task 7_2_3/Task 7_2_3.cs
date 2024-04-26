@@ -10,6 +10,7 @@ class DerivedClass : BaseClass
 {
     public override void Display()
     {
+        base.Display();
         Console.WriteLine("Метод класса DerivedClass");
     }
 }
@@ -21,7 +22,7 @@ class Program
         var baseClass = new BaseClass();
         var derivedClass = new DerivedClass();
 
-        baseClass.Display();
+        //baseClass.Display();
         derivedClass.Display();
     }
 }
