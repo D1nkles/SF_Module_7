@@ -1,26 +1,30 @@
-﻿class Car<T1> 
+﻿class Car<T1> where T1 : Engine
 {
     public T1 Engine;
 
-    public virtual void ChangePart<T2>(T2 newPart) { }
+    public virtual void ChangePart<T2> (T2 newPart) where T2 : CarPart { }
 }
 
-class ElectricEngine 
+class Engine { }
+
+class ElectricEngine : Engine
 {
 }
 
-class GasEngine 
+class GasEngine : Engine
 {
 }
 
-class Battery 
+class CarPart { }
+
+class Battery : CarPart
 {
 }
 
-class Differential
+class Differential : CarPart
 {
 }
 
-class Wheel 
+class Wheel : CarPart
 {
 }
